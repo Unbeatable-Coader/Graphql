@@ -1,5 +1,3 @@
-
-
 class UserAuthenticationSchema < GraphQL::Schema
   mutation(Types::MutationType)
   query(Types::QueryType)
@@ -28,7 +26,7 @@ class UserAuthenticationSchema < GraphQL::Schema
 
 
   def self.object_from_id(global_id, query_ctx)
-    
+
     GlobalID.find(global_id)
   end
 end
