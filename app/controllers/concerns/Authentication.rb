@@ -1,4 +1,3 @@
-
 module Authentication
   def current_user
     return nil unless request.headers['Authorization'].present?

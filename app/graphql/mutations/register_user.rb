@@ -1,9 +1,9 @@
 class Mutations::RegisterUser < Mutations::BaseMutation
-  argument :email, String, required: true
-  argument :password, String, required: true
-
   field :token, String, null: true
   field :user, Types::UserType, null: true
+
+  argument :email, String, required: true
+  argument :password, String, required: true
 
   def resolve(email:, password:)
     user = User.new(email: email, password: password)
